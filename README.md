@@ -2,20 +2,20 @@
 
 Proyecto de ejemplo sobre como desarrollar una Api REST con las tecnologías mencionadas
 
-1. git clone https://github.com/ISCFERNANDO/example-nodejs-typescript-sequelize.git
-2. npm install
-3. crear base de datos crud_user
-4. ejecutar script dump.sql
-5. crear archivo .env y colocar las siguientes variables
-PORT=puerto
-DB_HOST=hostDB
-DB_PORT=portDB
-DB_USER=userDB
-DB_PASSWORD=passwordDB
-DB_NAME=nameDB
-6. para ejecutar el proyecto contamos con los siguientes comandos
-`npm run debug ` ejecuta el proyecto en modo debug
-`npm run build` transpila el proyecto y genera el dist con codigo javascript
-`npm run start` toma el dist para ejecutar el proyecto
+#### Clonar repositorio con `git clone https://github.com/ISCFERNANDO/example-nodejs-typescript-sequelize.git`
+#### Instalar dependencias `npm install`
+#### Crear base de datos crud_user
+#### Ejecutar script dump.sql
+#### Crear archivo .env y colocar las siguientes variables
+1. PORT=puerto
+2. DB_HOST=hostDB
+3. DB_PORT=portDB
+4. DB_USER=userDB
+5. DB_PASSWORD=passwordDB
+6. DB_NAME=nameDB
+#### Para ejecutar el proyecto contamos con los siguientes comandos
+1. `npm run debug ` ejecuta el proyecto en modo debug
+2. `npm run build` transpila el proyecto y genera el dist con codigo javascript
+3. `npm run start` toma el dist para ejecutar el proyecto
 
 
