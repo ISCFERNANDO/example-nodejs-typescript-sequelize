@@ -1,19 +1,23 @@
 import express, { Application } from 'express';
 import bodyParser from 'body-parser';
-const config = require('dotenv').config();
-
-if (config.error) {
-    throw config.error;
-}
+require('dotenv').config();
 
 import routes from './routes';
-const app: Application = express();
 
-app.use(bodyParser.json());
-app.use(routes);
-app.set('port', process.env.PORT || 3001);
+export default class App {
+    public app: Application;
 
-app.listen(3001, () => {
-    console.log(`App is running on http://localhost:${app.get('port')}`);
-    console.log(app.get('env'));
-});
+    constructor() {
+        this.app = express();
+        this.app.use(bodyParser.json());
+        this.app.use(routes);
+        this.app.set('port', process.env.PORT || 3001);
+    }
+
+    public listen() {
+        this.app.listen(3001, () => {
+            console.log(`App is running on http://localhost:${this.app.get('port')}`);
+            console.log(this.app.get('env'));
+        });
+    }
+}
