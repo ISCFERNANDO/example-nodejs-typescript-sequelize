@@ -30,6 +30,7 @@ UserModel.init({
     email: {
         type: DataTypes.STRING(60),
         allowNull: true,
+        unique: true
     },
 }, {
     sequelize: connection,

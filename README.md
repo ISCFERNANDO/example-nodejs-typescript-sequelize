@@ -17,5 +17,7 @@ Proyecto de ejemplo sobre como desarrollar una Api REST con las tecnologías men
 1. `npm run debug ` ejecuta el proyecto en modo debug
 2. `npm run build` transpila el proyecto y genera el dist con codigo javascript
 3. `npm run start` toma el dist para ejecutar el proyecto
-4. `npm run test` para correr las pruebas unitarias y de integración
 
+#### Para ejecutar las pruebas unitarias se debe ejecutar cualquiera de los siguientes comandos
+1. `npm run test` para correr las pruebas unitarias y de integración
+2. `npm run test-report` para correr las pruebas unitarias y generar reporte de cobertura

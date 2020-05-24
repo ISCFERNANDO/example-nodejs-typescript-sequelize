@@ -40,7 +40,12 @@ export const addUser = async (request: Request<any>, response: Response<any>) =>
 export const updateUser = async (request: Request<any>, response: Response<any>) => {
     const { userId } = request.params;
     const userRequest: User = request.body;
+
     try {
+        const userDetail = await UserProvider.findById(userId);
+        if (!userDetail) {
+            return responseHandler.notFoundError(response, 'Usuario no encontrado');
+        }
         await UserProvider.updateUser(userRequest, userId);
     } catch (err) {
         return responseHandler.serverError(response);
