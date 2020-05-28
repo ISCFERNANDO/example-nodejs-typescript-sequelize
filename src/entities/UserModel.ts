@@ -24,12 +24,12 @@ export class UserModel extends Model {
 
 UserModel.init({
     id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: DataTypes.BIGINT,
         autoIncrement: true,
         primaryKey: true
     },
     roll_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         allowNull: true,
         references: {
             model: RollModel,
@@ -54,7 +54,7 @@ UserModel.init({
         unique: true
     },
     estatus: {
-        type: DataTypes.SMALLINT.UNSIGNED,
+        type: DataTypes.SMALLINT,
         allowNull: false,
     },
     created_at: {
@@ -64,7 +64,7 @@ UserModel.init({
     },
     updated_at: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
     }
 }, {
     sequelize: connection,

@@ -16,7 +16,7 @@ export class AccessRollModel extends Model {
 
 AccessRollModel.init({
     roll_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         references: {
@@ -25,7 +25,7 @@ AccessRollModel.init({
         },
     },
     access_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         references: {
@@ -34,11 +34,11 @@ AccessRollModel.init({
         },
     },
     access_type: {
-        type: DataTypes.SMALLINT.UNSIGNED,
+        type: DataTypes.SMALLINT,
         allowNull: false
     },
     estatus: {
-        type: DataTypes.SMALLINT.UNSIGNED,
+        type: DataTypes.SMALLINT,
         allowNull: false,
     },
     created_at: {
@@ -48,7 +48,7 @@ AccessRollModel.init({
     },
     updated_at: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
     }
 }, {
     sequelize: connection,

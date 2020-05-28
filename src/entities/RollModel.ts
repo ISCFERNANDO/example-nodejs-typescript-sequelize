@@ -25,7 +25,7 @@ export class RollModel extends Model {
 
 RollModel.init({
     id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
@@ -36,7 +36,7 @@ RollModel.init({
         unique: true,
     },
     estatus: {
-        type: DataTypes.SMALLINT.UNSIGNED,
+        type: DataTypes.SMALLINT,
         allowNull: false,
     },
     created_at: {
@@ -46,7 +46,7 @@ RollModel.init({
     },
     updated_at: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
     }
 }, {
     sequelize: connection,
